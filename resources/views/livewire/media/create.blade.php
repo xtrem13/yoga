@@ -1,6 +1,6 @@
 <div style="margin-top:50px">
     {{-- The whole world belongs to you --}}
-    <form wire:submit.prevent="save">
+    <form wire:submit.prevent="save" enctype="multipart/form-data">
 	    <div class="form-group">
 	    	<label>TITLE</label>
 	    	<input wire:model="media.title" class="form-control"/>

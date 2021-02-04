@@ -19,6 +19,7 @@ class Create extends Component
 		'media.title'=>'',
 		'media.type'=>''
 	];
+
     public function mount(){
     	if(!$this->media){
     		$this->media=new Media();
@@ -26,6 +27,7 @@ class Create extends Component
     	}
     }
     public function save(){
+        
         if($this->media->path && $this->file){
            Storage::delete($this->media->path);
         }

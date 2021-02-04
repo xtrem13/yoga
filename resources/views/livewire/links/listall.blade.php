@@ -3,8 +3,8 @@
     <table class="table">
     	<thead>
     		<tr>
-	    		<td>ID</td>
-	    		<td>TITLE</td>
+	    		<td>NAME</td>
+	    		<td>LINK</td>
 	    		<td>EDIT</td>
 	    		<td>DELETE</td>
     		</tr>
@@ -12,8 +12,8 @@
     	<tbody>
     		@foreach($links as $l)
 		    	<tr>
-    				<td>{{$l->id}}</td>
-    				<td>{{$l->user_id}}</td>
+    				<td>{{$l->user->name}}</td>
+    				<td>http://boombagi_spirit.uz/{{$l->hash}}</td>
     				<td>
     					<button class="btn btn-warning" wire:click="edit('{{$l->id}}')">
     						Edit
