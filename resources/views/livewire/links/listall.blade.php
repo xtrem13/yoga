@@ -13,10 +13,10 @@
     		@foreach($links as $l)
 		    	<tr>
     				<td>{{$l->user->name}}</td>
-    				<td>http://boombagi_spirit.uz/{{$l->hash}}</td>
+    				<td>http://boombagi_spirit.uz/link/{{$l->hash}}</td>
     				<td>
-    					<button class="btn btn-warning" wire:click="edit('{{$l->id}}')">
-    						Edit
+    					<button class="btn btn-warning" wire:click="remake('{{$l->id}}')">
+    						Remake
     					</button>
     				</td>
     				<td>

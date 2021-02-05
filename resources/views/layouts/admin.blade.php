@@ -87,11 +87,22 @@
                         </ul>
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="#pablo">
+                                <a class="nav-link" href="#pablo" onclick="logout()">
                                     <span class="no-icon">Log out</span>
                                 </a>
                             </li>
                         </ul>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                        style="display: none;">
+                                        @csrf
+                                        <button>Logout</button>
+                                    </form>
+                         <script>
+                            function logout() {
+                                document.getElementById("logout-form").submit();
+                            }
+
+                        </script>
                     </div>
                 </div>
             </nav>

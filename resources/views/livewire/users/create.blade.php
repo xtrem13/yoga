@@ -15,7 +15,6 @@
 	    	<label>PASSWORD</label>
 	    	<input wire:model="user.password_pure" class="form-control"/>
 	    </div>
-	    <input type="file" wire:model="user.image">	
 	    <div class="form-group">
 	    	<button class="btn btn-success">
 	    		SAVE

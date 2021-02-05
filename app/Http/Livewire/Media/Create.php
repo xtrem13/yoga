@@ -17,7 +17,8 @@ class Create extends Component
 
 	protected $rules=[
 		'media.title'=>'',
-		'media.type'=>''
+		'media.type'=>'',
+        'media.description'=>''
 	];
 
     public function mount(){
@@ -33,6 +34,7 @@ class Create extends Component
         }
     	if($this->file){
             $this->media->path=$this->file->store('media');
+            $this->media->original=$this->file->getClientOriginalName();
         }
     	$this->media->save();
     	$this->emitUp('submitted');

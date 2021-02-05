@@ -7,8 +7,12 @@ use Livewire\Component;
 
 class Listall extends Component
 {
-    public function edit($id){
-		$this->emitUp('creating', $id);
+    protected $link;
+    public function remake($id){
+		$this->link=Link::where('id', $id)->first();
+        $this->link->count++;
+        $this->link->hash=hash("sha256", $this->link->user_id.$this->link->count);
+        $this->link->save();
 	}
 	public function delete($id){
 		Link::where('id', $id)->delete();

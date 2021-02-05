@@ -5,7 +5,10 @@
 	    	<label>TITLE</label>
 	    	<input wire:model="media.title" class="form-control"/>
 	    </div>
-	   
+	   	<div class="form-group">
+	    	<label>DESCRIPTION</label>
+	    	<input wire:model="media.description" class="form-control"/>
+	    </div>
 	    <div class="form-group">
 	    	<label>TYPE</label>
 	    	<select wire:model="media.type" class="form-control">
@@ -16,7 +19,8 @@
 	    </div>
 
 	    <div class="form-group">
-	    	<label>FILE</label>
+	    	<label>FILE</label><br>
+	    	<p>{{$media->original}}</p>
 	    	<input wire:model="file" class="form-control" type="file"/>	
 	    	@error('file')
 	    		<span class="alert alert-danger">
